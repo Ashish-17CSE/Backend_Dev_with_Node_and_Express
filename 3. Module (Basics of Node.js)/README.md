@@ -2,10 +2,8 @@
 
 This repository contains a simple Node.js server that listens on port 4000 and responds with a message containing the name "Ashish".
 
-## Getting Started
+## About the Project
 
-Follow these steps to run the server locally on your machine:
+The server is created using Node.js's built-in 'http' module. The server code is located in the 'Localhost.js' file and consists of a basic HTTP server setup that listens on port 4000. When you visit the server URL in your browser or make an HTTP request, it responds with a message containing the name "Ashish".
 
-1. Make sure you have Node.js installed. You can download it from [nodejs.org](https://nodejs.org/).
-
-2. Clone this repository to your local machine:
+![image](https://github.com/Ashish-17CSE/Backend_Dev_with_Node_and_Express/assets/68491332/04de010c-ca4e-4092-aeea-b898af6eb494)
