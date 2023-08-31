@@ -7,10 +7,21 @@ const RequestHandler = (req, res) => {
     if (url === '/') {
         res.write('<html>');
         res.write('<head><title>Enter Message</title></head>');
-        res.write('<body> <form action="/message" method="POST"> <input type="text" name="message"> <button type="submit">Send</button> </form> </body>');
+        res.write('<body> <form action="/message" method="POST" onsubmit="setTimeout(function(){ location.reload(); }, 100);"> <input type="text" name="message"> <button type="submit">Send</button> </form>');
+    
+        // Read messages from file and display them
+        const messages = fs.readFileSync('message.txt', 'utf8').split('\n');
+        messages.forEach(message => {
+            if (message.trim() !== '') {
+                res.write(`<p>${message}</p>`);
+            }
+        });
+        
+        res.write('</body>');
         res.write('</html>');
         return res.end();
     }
+    
     // ## Redirecting Requests --> 10th video ## //
     if (url === '/message' && method === 'POST') {
         // ## Parsing Request Bodies --> 11th Video ## //
@@ -22,7 +33,12 @@ const RequestHandler = (req, res) => {
         return req.on('end', () => {
             const parsendBody = Buffer.concat(body).toString();
             const message = parsendBody.split('=')[1];
-            fs.writeFileSync('message.txt', message, err => {
+            fs.writeFileSync('message.txt', message + '\n', 'utf8', err => {
+                 if (err) {
+                    console.error(err);
+                } else {
+                    console.log('Message saved!');
+                }
                 res.statusCode = 302;
                 res.setHeader('Location', '/');
                 return res.end();
@@ -52,9 +68,9 @@ const RequestHandler = (req, res) => {
     }*/
 
 //  OR
-    // module.exports.handler = RequestHandler;
-    // module.exports.someText = 'Some hard coded text';
+    module.exports.handler = RequestHandler;
+    module.exports.someText = 'Some hard coded text';
 
 // OR
-exports.hendler = RequestHandler;
-exports.someText = "Some hard coded text";
+    // exports.hendler = RequestHandler;
+    // exports.someText = "Some hard coded text";
