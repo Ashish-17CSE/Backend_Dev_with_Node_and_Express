@@ -1,0 +1,15 @@
+{
+  "name": "node.js-by-sharpener",
+  "version": "1.0.0",
+  "description": "Node.js Class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Ashish",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon" : "^3.0.1"
+  }
+}
