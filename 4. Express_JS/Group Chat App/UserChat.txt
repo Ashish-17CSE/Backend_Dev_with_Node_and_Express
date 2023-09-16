@@ -1,0 +1,10 @@
+@Ashish : Hello Bro !
+@Panjak : Hi Ashish !
+@Panjak : How are you
+@Ashish : I am fine, how are you?
+@Ashish : Did you attend today class?
+@Panjak : Yes bro
+@Ashish : can you send the today class notes
+@Panjak : Sure why not bro
+@Ashish : Okay Thanks bro
+@Panjak : Most welcome Brother 
