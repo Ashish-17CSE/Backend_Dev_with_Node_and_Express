@@ -15,13 +15,15 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findById(prodId, product => {
+  Product.findById(prodId)
+  .then(([product]) => {
     res.render('shop/product-detail', {
-      product: product,
+      product: product[0],
       pageTitle: product.title,
       path: '/products'
     });
-  });
+  })
+  .catch(err => console.log(err));
 };
 
 exports.getIndex = (req, res, next) => {
@@ -65,10 +67,15 @@ exports.postCart = (req, res, next) => {
 
 exports.postCartDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
-  Product.findById(prodId, product => {
+  Product.findById(prodId)
+  .then(([prodId]) => {
     Cart.deleteProduct(prodId, product.price)
     res.redirect('/cart')
   })
+  .catch(err => console.log(err));
+  product => {
+    
+  }
 }
 
 exports.getOrders = (req, res, next) => {
