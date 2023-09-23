@@ -1,4 +1,34 @@
-const db = require('../util/database');
+
+const Sequelize = require('sequelize');
+
+const sequelize = require('../util/database')
+
+const Product = sequelize.define('product', {
+  id: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    allowNull : false,
+    primaryKey: true
+  },
+  title: Sequelize.STRING,
+  print:{
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  imageUrl:{
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  description:{
+    type: Sequelize.STRING,
+    allowNull: false
+  }
+})
+
+module.exports = Product;
+
+
+/*const db = require('../util/database');
 const Cart = require('./cart')
 
 
@@ -31,3 +61,4 @@ module.exports = class Product {
     return db.execute('SELECT * FROM products WHERE products.id = ?', [id]);
   }
 };
+*/
