@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking App</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+    <h1>Appointment Booking App</h1>
+    <form action="/users" method="POST">
+        <label for="UserName">Username :</label>
+        <input type="text" id="UserName" name="UserName" required>
+        <br>
+
+        <label for="PhoneNumber">Phone Number :</label>
+        <input type="text" id="PhoneNumber" name="PhoneNumber" required>
+        <br>
+
+        <label for="Email">Email :</label>
+        <input type="email" id="Email" name="Email" required>
+        <br>
+
+        <button type="submit" value="submit" id="submit">Add New Data</button>
+    </form>
+    <h2>User Data</h2>
+    <!-- Create a container for the user list -->
+    <div>
+        <table action="/users" method="GET" id="userList">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <!-- 'axios' module  -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
