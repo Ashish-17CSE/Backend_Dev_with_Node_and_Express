@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting App</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+
+</head>
+
+<body>
+    <h1>Meeting App</h1>
+    <div class="row">
+        <!-- Meeting Time -->
+        <div class="column">
+            <div class="container" id="Time1">
+                <h4>2:00 PM</h4>
+                <p id="Time1_Available"><!--number of slots are -->Available</p>
+            </div>
+            <div class="container" id="Time2">
+                <h4>2:30 PM</h4>
+                <p id="Time2_Available">Available</p>
+            </div>
+            <div class="container" id="Time3">
+                <h4>3:00 PM</h4>
+                <p id="Time3_Available">Available</p>
+            </div>
+            <div class="container" id="Time4">
+                <h4>3:30 PM</h4>
+                <p id="Time4_Available">Available</p>
+            </div>
+        </div>
+
+        <!-- User Details  -->
+
+        <div class="column" id="inputFields">
+            <form class="UserDetails"  id="bookingForm" style="display: none;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="UserName" required>
+                <br>
+                <label for="email">Email :</label>
+                <input type="text" id="email" name="UserEmail" required>
+                <br>
+                <button type="submit" id="Book">Book</button>
+            </form>
+        </div>
+    </div>
+    <h2>Scheduled Meeting</h2>
+    <div class="row boder">
+        <div class="column">
+            <div class="card" id="card1">
+                <h3><!-- Display the name dynamically as user Internet --> User Name</h3>
+                <p>Please join the meeting via this <!--Haar meeting link will display-->at
+                    <!--Here time will display-->
+                </p>
+                <br>
+                <button type="submit" id="Cancel">Cancel</button>
+            </div>
+            <div class="card" id="card2">
+                <h3><!-- Display the name dynamically as user Internet --> User Name</h3>
+                <p>Please join the meeting via this <!--Haar meeting link will display-->at
+                    <!--Here time will display-->
+                </p>
+                <br>
+                <button type="submit" id="Cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/js/script.js"></script>
+</body>
+
+</html>

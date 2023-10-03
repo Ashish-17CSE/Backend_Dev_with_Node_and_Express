@@ -1,0 +1,136 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    
+}
+h2 {
+    text-align: center;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Container for time slots and user details */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+/* Styling for the time slots */
+.container {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Styling for user details column */
+.column {
+    flex-basis: calc(35% - 20px);
+    /* Adjust the width as needed */
+    padding: 10px;
+
+}
+
+.UserDetails {
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+/* Styling for input fields and button */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: green;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Scheduled Meeting card */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Cancel button */
+button#Cancel {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Additional styling for the Scheduled Meeting cards */
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Border for the Scheduled Meeting section */
+.boder {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
+        flex-basis: 100%;
+    }
+}
