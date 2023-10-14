@@ -4,52 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../public/css/styles.css">
     <title>Database Management</title>
 </head>
 
 <body>
     <h1>Database Management</h1>
 
-    <!-- Create Table Form -->
-    <button id="createTableBtn">Create Table</button>
-
     <!-- Display Table Names -->
-    <h2>Tables:</h2>
-    <ul id="tableList">
-        <!-- Table names will be dynamically added here -->
-    </ul>
+    <fieldset id="TableName">
+        <legend>Tables:</legend>
+        <ul id="tableList">
+            <!-- Table names will be dynamically added here -->
+        </ul>
 
+        <!-- Create Table Form -->
+        <button id="createTableBtn">Create Table</button>
+    </fieldset>
+    <br>
+
+    <table>
+
+    </table>
     <!-- JavaScript to handle interactions -->
     <script src="/js/script.js"></script>
-
-    <button id="createTableBtn">Create Table</button>
-
-    <!-- Create Table Modal -->
-    <div id="createTableModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Create Table</h2>
-            <form id="createTableForm">
-                <label for="tableName">Table Name:</label>
-                <input type="text" id="tableName" name="tableName" required>
-
-                <div id="columns">
-                    <select id="cars" name="cars">
-                        <option value="volvo">Volvo XC90</option>
-                        <option value="saab">Saab 95</option>
-                        <option value="mercedes">Mercedes SLK</option>
-                        <option value="audi">Audi TT</option>
-                      </select>
-                </div>
-                <br>
-                <button type="button" id="addColumnBtn">Add Column</button>
-                <br><br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
 </body>
 
 </html>

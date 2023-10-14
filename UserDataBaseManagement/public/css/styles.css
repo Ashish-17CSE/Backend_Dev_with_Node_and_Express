@@ -1,0 +1,37 @@
+body {
+    margin: 5%;
+}
+
+input[type="text"] {
+    width: 40%;
+    margin: 5px 0px;
+}
+
+#CreateTableBox {
+    width: 50%;
+}
+
+#TableName{
+    width: 25%;
+}
+legend {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid black;
+}
+
+label {
+    display: inline-block;
+    clear: left;
+    width: 40%;
+    margin-top: 5px;
+    text-align: left;
+}
+
+#AddField{
+    border: none;
+    background: none;
+    color: blue;
+    text-decoration: underline;
+}
