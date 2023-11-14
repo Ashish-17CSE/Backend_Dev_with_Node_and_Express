@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/styles.css">
     <title>Database Management</title>
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="../public/css/styles.css">
 </head>
-
 <body>
+
+<!-- Main Content -->
+<div id="mainContent">
     <h1>Database Management</h1>
 
     <!-- Display Table Names -->
@@ -24,10 +26,48 @@
     <br>
 
     <table>
-
+        <!-- Your table content goes here -->
     </table>
-    <!-- JavaScript to handle interactions -->
-    <script src="/js/script.js"></script>
-</body>
+</div>
 
+<!-- Popup Overlay -->
+<div class="overlay"></div>
+
+<!-- Popup Container -->
+<div class="popup-container">
+    <span class="close-btn">&times;</span>
+    <form id="createTableForm">
+        <h3>Create Table</h3>
+        <label for="tableName">Table Name</label>
+        <input type="text" id="tableName" name="tableName" required><br>
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <label for="FieldNames">Field Names</label>
+                    <input type="text" id="FieldNames" name="FieldNames" required>
+                
+                    <label for="DataType">Type</label>
+                    <select id="DataType" name="DataType">
+                        <option selected disabled></option>
+                        <option value="STRING">STRING</option>
+                        <option value="INTEGER">INTEGER</option>
+                        <option value="BOOLEAN">BOOLEAN</option>
+                        <option value="JSON">JSON</option>
+                        <option value="DUOBLE">DUOBLE</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <button id="AddField" role="link">Add another field</button>
+        <br><br>
+        <button type="submit" id="CreateTable">Create Table</button>
+    </form>
+</div>
+
+<!-- JavaScript to handle interactions -->
+<!-- <script src="/js/script.js"></script> -->
+<script src="../public/js/script.js"></script>
+</body>
 </html>

@@ -1,37 +1,168 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    font-family: 'Arial', sans-serif;
     margin: 5%;
 }
 
-input[type="text"] {
-    width: 40%;
-    margin: 5px 0px;
+/* Main Content */
+#mainContent {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-#CreateTableBox {
-    width: 50%;
+h1 {
+    color: #333;
 }
 
-#TableName{
-    width: 25%;
+/* Table List */
+#TableName {
+    margin-bottom: 20px;
 }
+
 legend {
+    font-weight: bold;
     display: block;
     padding-left: 10px;
     padding-right: 10px;
     border: 2px solid black;
 }
 
-label {
+#tableList {
+    list-style-type: none;
+}
+
+#tableList li {
     display: inline-block;
-    clear: left;
-    width: 40%;
-    margin-top: 5px;
+    margin-right: 10px;
+}
+
+/* Create Table Form */
+#createTableBtn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
     text-align: left;
 }
 
-#AddField{
+/* Popup Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Popup Container */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 40%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Form Styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    width: 40%;
+    clear: left;
+    text-align: left;
+    margin-top: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+.col {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Button Styles */
+button {
+    background-color: #4caf50;
+    color: white;
     border: none;
-    background: none;
-    color: blue;
-    text-decoration: underline;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#AddField {
+    background-color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #mainContent {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .col {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
